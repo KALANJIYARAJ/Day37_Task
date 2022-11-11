@@ -1,0 +1,21 @@
+[
+  {
+    '$match': {
+      '$and': [
+        {
+          'product_price': {
+            '$not': {
+              '$gt': 400
+            }
+          }
+        }, {
+          'product_price': {
+            '$not': {
+              '$gt': 600
+            }
+          }
+        }
+      ]
+    }
+  }
+]

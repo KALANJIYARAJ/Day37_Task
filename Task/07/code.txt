@@ -1,0 +1,6 @@
+db.product.find(
+  {
+ product_name:"Refined Steel Car",
+ product_material:"Rubber"
+ }
+ )

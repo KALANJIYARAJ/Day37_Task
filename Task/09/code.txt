@@ -1,0 +1,17 @@
+[
+  {
+    '$match': {
+      '$or': [
+        {
+          'product_color': {
+            '$eq': 'indigo'
+          }
+        }, {
+          'product_price': {
+            '$eq': 492
+          }
+        }
+      ]
+    }
+  }
+]

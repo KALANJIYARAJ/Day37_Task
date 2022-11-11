@@ -1,0 +1,19 @@
+[
+  {
+    '$match': {
+      'product_price': {
+        '$gt': 400
+      }
+    }
+  }, {
+    '$match': {
+      'product_price': {
+        '$lt': 800
+      }
+    }
+  }, {
+    '$sort': {
+      'product_price': 1
+    }
+  }
+]

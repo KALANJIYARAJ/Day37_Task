@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "636ddd9ae3bc5eb3cf63c125"
+  },
+  "id": "3",
+  "product_name": "Refined Steel Car",
+  "product_price": 690,
+  "product_material": "Rubber",
+  "product_color": "gold"
+}]

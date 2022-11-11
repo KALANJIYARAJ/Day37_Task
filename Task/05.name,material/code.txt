@@ -1,0 +1,8 @@
+[
+  {
+    '$project': {
+      'name': '$product_name', 
+      'material': '$product_material'
+    }
+  }
+]

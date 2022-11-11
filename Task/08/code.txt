@@ -1,0 +1,9 @@
+[
+  {
+    '$match': {
+      'product_material': {
+        '$eq': 'Soft'
+      }
+    }
+  }
+]

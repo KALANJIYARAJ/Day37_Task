@@ -1,0 +1,69 @@
+db.product.ensureIndex({product_price: 1}, {unique: true, dropDups: true})
+
+or
+
+[
+  {
+    '$group': {
+      '_id': '$product_price', 
+      'count': {
+        '$sum': 1
+      }
+    }
+  }, {
+    '$match': {
+      '_id': {
+        '$ne': null
+      }, 
+      'count': {
+        '$gt': 1
+      }
+    }
+  }, {
+    '$project': {
+      'price': '$_id', 
+      '_id': 0
+    }
+  }
+]
+
+
+
+db.product.find(
+  {
+  $or :[
+    {
+      product_price : 36
+    },
+    {
+      product_price :47
+    }
+    ]
+}
+)
+
+B39WDTamil2> db.product.deleteOne(
+...   {
+...         "id": "20",
+...         "product_name": "Handcrafted Wooden Bacon",
+...         "product_price": 36.00,
+...         "product_material": "Concrete",
+...         "product_color": "lime"
+...     }
+...     )
+{ acknowledged: true, deletedCount: 1 }
+B39WDTamil2> db.product.deleteOne(
+...   {
+...         "id": "24",
+...         "product_name": "Tasty Rubber Cheese",
+...         "product_price":47.00,
+...         "product_material": "Frozen",
+...         "product_color": "orchid"
+...     }
+...     )
+{ acknowledged: true, deletedCount: 1 }
+
+
+db.product.find()
+  
+
